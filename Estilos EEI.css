@@ -135,6 +135,16 @@ footer {
     /* border: 2px violet solid; */
 }
 
+footer a {
+	text-decoration: none;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer a:hover {
+	color: rgb(134, 134, 134);
+}
+
 .formulario {
     min-height: 650px;
     padding: 0.5rem;
