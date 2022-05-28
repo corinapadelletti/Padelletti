@@ -49,6 +49,7 @@ body, main {
     right: auto;
     top: auto;
     border-bottom: 2px rgb(134, 134, 134, 50%) solid;
+    /* overflow: hidden; */
     /* box-shadow: 0 0 0.5rem 0 gray; */
     /* border: 3px red solid; */
 }
@@ -94,7 +95,7 @@ main>div {
 }
 
 main>aside {
-    min-height: 180px;   
+    min-height: 0px;   
     min width: 25%;
     margin: 0.5rem; 
     float: left;
@@ -190,7 +191,7 @@ footer {
     display: grid;
     grid-template-rows: auto;
     /* grid-column-gap: 10px; */
-    grid-template-columns: [x0] 35% [x1] 65%;
+    grid-template-columns: [x0] 65% [x1] 35%;
     align-items: center; 
 }
 
@@ -210,110 +211,44 @@ footer {
     -moz-transform: scale(1.1);
 }
 
-.active {
-    transform: translate(-600px);
-}
-
-.opacity {
-    background-color: black;
-    transition: all. 5s ease;
-}
-
-.icono-menu {
-    margin: 40px 50px;
-    position: relative;
-    z-index: 10;
-}
-
-.icono-menu img {
-    vertical-align: top;
-    width: 40px;
-    cursor: pointer;
-    float: right;
-}
-
-.cont-menu {
-    background-color: black;
-    width: auto;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: right;
-    transition: all .5s ease;
-}
-
-.cont-menu ul {
-    padding: 100px 0px 20px 0px;
-    list-style: none;   
-}
-
-.cont-menu ul li {
-    color: white;
-    display: block;
-    font-size: 25px;
-    text-decoration: none;
-    padding: 10px 50px;
-    cursor: pointer;
-}
+@media (max-width:768px){
+    .grid-f1 {
+        display: grid;
+        grid-template-rows: 100% 100%;
+        grid-template-columns: auto;
+        align-items: center;
+        grid-row-gap: 10px;
+        display: block;
+    }
     
-.cont-menu ul li:hover {
-    background-color: rgb(134, 134, 134, 50%);
-    color: black;
-    text-decoration: none;
+    .grid-f2 {
+        display: grid;
+        grid-template-rows: 100% 100%;
+        grid-template-columns: auto;
+        align-items: center; 
+        display: block;
+    }
 }
+  
+  @media (max-width:630px){
+    .header-logo {
+        height: 0px;
+        width: 0%;
+    }
+    
+    .header-logo img {
+        width: 0px;
+    }
 
-.cont-menu ul li a {
-    color: white;
-    text-decoration: none;
+    .header-menu {
+        height: auto;
+        width: 100%;
+        background-color: black;
+        display: inline-block;
+        float: right;
+        position: relative;
+        right: auto;
+        top: auto;
+        border-bottom: 2px rgb(134, 134, 134, 50%) solid;
+  }
 }
-
-/* .cont-menu es igual a header-menu. las partes de .cont-menu ul li a
-.cont-menu ul li:hover , .cont-menu ul  y .cont-menu ul li se pueden sacar.
-
-icono-menu seria como header-logo: .icono-menu */
-
-
-/* .logo {
-    width: 140px;
-    margin-left: 20px;
-}
-
-.bar-btn {
-    font-size: 25px;
-    color: yellow; 
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.nav-menu {
-    position: fixed;
-    width: 80%;
-    height: 100vh;
-    transition: all .5s;
-}
-
-.nav-menu li {
-    display: block;
-    line-height: 30px;
-    transition: all .5s;
-}
-
-.nav-menu li a {
-    color: gray;
-    text-transform: uppercase;  
-}
-
-.nav-menu li a.active, .nav-menu li a:hover {
-    color: red;
-    transition: .3s;    
-}
-
-#check {
-    display: none;
-}
-
-#check:checked .nav-menu {
-    height: 100vh;
-    display: none;
-} */
