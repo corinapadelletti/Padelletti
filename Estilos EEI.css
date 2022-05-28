@@ -107,7 +107,7 @@ main>aside {
     min-height: 50px;   
     margin: 0.5rem; 
     padding: 0.5rem;
-    border: 2px green solid;
+    /* border: 2px green solid; */
 }
 
 .titulos {
